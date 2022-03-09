@@ -42,9 +42,7 @@ app.get("/users/:id", async (req, res) => {
   const allUser = await getAllUser();
   console.log(allUser[userId]);
   res.send(
-    `the user infomation of id:${userId} ${
-      JSON.parse(JSON.stringify(allUser[userId - 1])).id
-    }`
+    `the user infomation of id:${userId} ${JSON.stringify(allUser[userId - 1])}`
   );
 });
 
